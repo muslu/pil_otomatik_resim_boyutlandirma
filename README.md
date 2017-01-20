@@ -26,13 +26,14 @@ def ortala(resim):
     ### Görseli aç
     
     im.thumbnail((yeni_Genislik, yeni_Yukseklik), Image.ANTIALIAS)
-    ### Görseller 360*360 pikselleri geçmeyecek şekilde orantılı olarak boyutlandırılacak. Bozulmalar önlenecek
+    ### Görseller 360*360 pikselleri geçmeyecek şekilde orantılı olarak boyutlandırılacak.
+    ### Bozulmalar önlenecek
     #### 360*360 pikselden küçük olanlar boyutlandırılmaz
     
     im.save('thumb/' + resim[:-4] + '.png', quality=100)
-    ### thumb klasörünün altında var olan uzantıları silinip .png olacak şekilde tekrar adlandırılacak
+    ### thumb klasörünün altına kayıt eder, uzantıyı silinip .png olacak şekilde tekrar adlandırılacak
     ### kalitesi en fazla olacak şekilde ayarlanacak
-    #### kayıt işlemi opsiyonel
+    ##### kayıt işlemi opsiyonel
     
     bos = Image.new("RGBA", (arkaplan_Genislik, arkaplan_Yukseklik), '#ffffff')
     ### RGB ve Alpha olacak şekilde arkaplanı beyaz boş bir imaj oluşturuluyor
