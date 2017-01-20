@@ -1,3 +1,10 @@
+Python PIL ile resim boyutlandırma
+
+Belirlenen klasördeki istenilen uzantılar seçilerek istenilen boyutlara getirilir ve boş bir imaja eklenerek hepsi aynı boyutta yayınlanır.
+
+
+```
+
 # -*- coding: utf-8 -*-
 import os
 
@@ -64,3 +71,4 @@ dosyalar = [fn for fn in os.listdir(dosya_klasoru) if any(fn.endswith(ext) for e
 
 for dosya in dosyalar:
     ortala(dosya)
+```
